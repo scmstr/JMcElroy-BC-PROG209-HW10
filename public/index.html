@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>My Page For Things</title>
+
+      <script src="/public/javascripts/jquery-1.11.1.min.js"></script>
+      <script src="/public/javascripts/jquery.mobile-1.4.5.min.js"></script>
+
+      <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+      <link rel="stylesheet" href="/public/stylesheets/themes/headacheTheme.min.css" />
+      <link rel="stylesheet" href="/public/stylesheets/themes/jquery.mobile.icons.min.css" />
+
+      <script src="/public/javascripts/index.js"></script>
+      <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css">
+
+    </head>
+
+    <body>
+
+      <!-- ----------------------------- Home PAGE -->
+      <div data-role="page"  id="home">
+
+        <!--  Home PAGE Header -->
+        <div data-role="header" data-theme='b'>
+          <h1>The Best of the 80s!</h1>
+          <div data-role="navbar"  data-theme='c'>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#page1">See The List!</a></li>
+              <li><a href="#page2">Add a Song to the List!</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--  Home PAGE Content -->
+        <div data-role="content" data-theme='e'>
+          <h2> Welcome to the Vintage 80s Collection of music</h2>
+        </div>
+          
+        <!--  Home PAGE footer -->
+        <div data-role="footer" data-theme='b'>
+          <h1>Copyright 2020 J McElroy</h1>
+        </div>
+
+      </div>
+
+
+      <!-- ----------------------------- Entire List PAGE -->
+      <div data-role="page"  id="page1">
+
+        <!--  The List PAGE Header -->
+        <div data-role="header" data-theme='b'>
+          <h1>The Entire List</h1>
+          <div data-role="navbar"  data-theme='c'>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#page1">See The List!</a></li>
+              <li><a href="#page2">Add a Song to the List!</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- The List PAGE content -->
+        <div data-role="content" data-theme='e'>
+          <div id="divUserlist"></div>
+        </div>
+
+        <div style="display:inline" >
+          <button id="btnSortYear">Sort By Year</button> <button id="btnSortName">Sort By Title</button>
+        </div>
+          
+        <!--  The List PAGE footer -->
+        <div data-role="footer" data-theme='b'>
+          <h1>Copyright 2020 J McElroy</h1>
+        </div>
+
+      </div>
+
+
+      <!-- ----------------------------- Add Song PAGE -->
+      <div data-role="page"  id="page2">
+
+        <!--  Add Song PAGE header -->
+        <div data-role="header" data-theme='b'>
+          <h1>Add a Song to the List!</h1>
+          <div data-role="navbar"  data-theme='c'>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#page1">See The List!</a></li>
+              <li><a href="#page2">Add a Song to the List!</a></li>
+              <!-- <li><a href="#page3">Page 3</a></li> -->
+            </ul>
+          </div>
+        </div>
+
+        <!--  Add Song PAGE content -->
+        <div data-role="content" data-theme='e'>
+          Song Title: <br />
+          <input type="text" value="" id="pSongName" />
+          Artist: <br />
+          <input type="text" value="" id="pSongArtist" />
+          Album Name: <br />
+          <input type="text" value="" id="pSongAlbum" />
+          Album Release Date: <br />
+          <input type="text" value="" id="pSongAlbumReleaseDate" />
+
+          <input type="button" value="Click To Add Song" id="btnAddSong"/>
+        </div>
+          
+        <!--  Add Song PAGE footer -->
+        <div data-role="footer" data-theme='b'>
+          <h1>Copyright 2020 J McElroy</h1>
+        </div>
+
+      </div>
+
+
+      <!-- ----------------------------- Song details PAGE -->
+      <div data-role="page"  id="page3">
+
+        <!--  Song details PAGE header -->
+        <div data-role="header" data-theme='b'>
+          <h1>Amazing 80s Playlist</h1>
+          <div data-role="navbar"  data-theme='c'>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#page1">See The List!</a></li>
+              <li><a href="#page2">Add a Song to the List!</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--  Song details PAGE content -->
+        <div data-role="content" data-theme='e'>
+          <p id='secretID' style='display: none;'></p>
+          <div>
+              <br>
+              <p><span class="bold"> Title: </span><span id="oneTitle"></span></p>
+              <p><span class="bold"> Artist: </span><span id="oneYear"></span></p>
+              <p><span class="bold"> Album: </span><span id="oneGenre"></span></p>
+              <p><span class="bold"> Release Date: </span><span id="oneWoman"></span></p>
+          </div>
+          <br />
+          <br /> 
+          <div style="max-width: 448px;">
+            <iframe  id='ytplayer' type='text/html' width='448' height='252' src='' frameborder='0' SameSite='None' Secure='true' >
+            </iframe>
+          </div>
+        </div>
+          
+        <!--  Song details PAGE footer -->
+        <div data-role="footer" data-theme='b'>
+          <h1>Copyrigtht 2020 J McElroy</h1>
+        </div>
+        
+      </div> 
+
+      
+      <!-- ----------------------------- LOADING PAGE -->
+      <div data-role="page"  id="page4">
+
+        <!--  LOADING PAGE header -->
+        <div data-role="header" data-theme='b'>
+          <h1>Amazing 80s Playlist</h1>
+          <div data-role="navbar"  data-theme='c'>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#page1">See The List!</a></li>
+              <li><a href="#page2">Add a Song to the List!</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!--  LOADING PAGE content -->
+        <div data-role="content" data-theme='e'>
+          <p id="IDparmHere">Happy Easter</p>  <!-- hidden    a place to stash the user ID -->
+          <p id="stupidity" style="display:none"></p> <!-- a hidden place to stash...something -->
+        </div>
+          
+        <!--  LOADING PAGE footer -->
+        <div data-role="footer" data-theme='b'>
+          <h1>Copyrigtht 2020 J McElroy</h1>
+        </div>
+        
+      </div> 
+        
+    </body>
+  </html>
